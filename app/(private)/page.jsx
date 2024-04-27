@@ -1,7 +1,8 @@
 'use client'
 import { useEffect } from 'react'
 import { useFetchUsersQuery } from '@/libs/api/users'
-import CardContainer from '../_components/CardContainer'
+import UserCard from '../_components/UserCard'
+import { Grid } from '@mui/material'
 
 export default function Dashboard() {
   const {
@@ -18,7 +19,7 @@ export default function Dashboard() {
   }, [])
 
   return (
-    <>
+    <div>
       {fetchUsersLoading ? (
         <div>Loading users...</div>
       ) : fetchUsersError ? (
@@ -26,87 +27,14 @@ export default function Dashboard() {
       ) : (
         <div
           style={{
-            width: '100%',
-            height: '100%'
+            width: '100%'
           }}
         >
-          {usersData.map(user => (
-            <div key={user.id}>{user.name}</div>
+          {usersData?.map(user => (
+            <UserCard user={user} key={user.ids} />
           ))}
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-            facere quos molestias, eligendi aut eveniet exercitationem, expedita
-            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
-            possimus sapiente totam.
-          </div>
         </div>
       )}
-    </>
+    </div>
   )
 }
