@@ -1,8 +1,8 @@
-import { Container } from '@mui/material'
+import { Container, Paper } from '@mui/material'
 export default function PrivateRootContainer({ children }) {
   return (
-    <Container
-      maxWidth='md'
+    <Paper
+      // maxWidth='md'
       sx={{
         display: 'flex',
         height: '100%',
@@ -13,6 +13,6 @@ export default function PrivateRootContainer({ children }) {
       }}
     >
       {children}
-    </Container>
+    </Paper>
   )
 }

@@ -18,7 +18,7 @@ export default function Dashboard() {
   }, [])
 
   return (
-    <CardContainer>
+    <>
       {fetchUsersLoading ? (
         <div>Loading users...</div>
       ) : fetchUsersError ? (
@@ -33,8 +33,80 @@ export default function Dashboard() {
           {usersData.map(user => (
             <div key={user.id}>{user.name}</div>
           ))}
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
+            facere quos molestias, eligendi aut eveniet exercitationem, expedita
+            inventore reprehenderit neque id, dicta nulla qui fugiat incidunt
+            possimus sapiente totam.
+          </div>
         </div>
       )}
-    </CardContainer>
+    </>
   )
 }
