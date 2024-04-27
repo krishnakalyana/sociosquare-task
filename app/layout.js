@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-import ImageBackground from "./(public)/_components/BackgroundImage";
+import ImageBackground from "./_components/BackgroundImage";
+import StoreProvider from "./StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <ImageBackground src={"/assets/wave.svg"} alt="background" />
-        {children}</body>
+        <StoreProvider>
+          {children}
+        </StoreProvider>
+      </body>
     </html>
   );
 }
