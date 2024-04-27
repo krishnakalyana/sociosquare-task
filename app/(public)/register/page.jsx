@@ -14,7 +14,7 @@ export default function Register() {
   return (
     <CardContainer>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form__layout}>
-        <Typography align='center' variant='h5' color={'primary'}>
+        <Typography align='center' variant='h5' color={'primary'} gutterBottom>
           Lets get you started !
         </Typography>
 
