@@ -1,65 +1,65 @@
-"use client";
-import { Button, Divider, TextField, Typography } from "@mui/material";
-import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
-import CardContainer from "../_components/CardContainer";
-import styles from "./login.module.css";
-import { pages } from "@/utils/constants";
+'use client'
+import { Button, Divider, TextField, Typography } from '@mui/material'
+import { useForm } from 'react-hook-form'
+import { useRouter } from 'next/navigation'
+import CardContainer from '../_components/CardContainer'
+import styles from '../public.module.css'
+import { pages } from '@/utils/constants'
 export default function Login() {
-  const { register, handleSubmit } = useForm();
-  const router = useRouter();
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const { register, handleSubmit } = useForm()
+  const router = useRouter()
+  const onSubmit = data => {
+    console.log(data)
+  }
   return (
     <CardContainer>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.login__form}>
-        <Typography align="center" variant="overline" color={"primary"}>
-          Login
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form__layout}>
+        <Typography align='center' variant='h5' color={'primary'}>
+          Welcome Back!
         </Typography>
         <TextField
-          size="small"
-          {...register("username")}
-          label="Username"
-          variant="outlined"
+          size='small'
+          {...register('username')}
+          label='Username'
+          variant='outlined'
           fullWidth
         />
         <TextField
-          size="small"
-          {...register("password")}
-          label="Password"
-          type="password"
-          variant="outlined"
+          size='small'
+          {...register('password')}
+          label='Password'
+          type='password'
+          variant='outlined'
           fullWidth
         />
         <Button
-          type="submit"
-          variant="contained"
-          color="primary"
+          type='submit'
+          variant='contained'
+          color='primary'
           fullWidth
           onClick={() => {
-            router.push(pages.Dashboard);
+            router.push(pages.Dashboard)
           }}
         >
           Login
         </Button>
       </form>
       <Divider flexItem>
-        <Typography align="center" variant="overline">
+        <Typography align='center' variant='overline'>
           OR
         </Typography>
       </Divider>
       <Button
-        type="submit"
-        variant="outlined"
-        color="primary"
+        type='submit'
+        variant='outlined'
+        color='primary'
         fullWidth
         onClick={() => {
-          router.push(pages.REGISTER);
+          router.push(pages.REGISTER)
         }}
       >
         Register
       </Button>
     </CardContainer>
-  );
+  )
 }
