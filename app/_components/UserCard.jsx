@@ -54,12 +54,29 @@ export default function UserCard({ user }) {
         }
       />
       <CardContent>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} lg={3}>
-            <Typography variant='caption'>Phone :</Typography>
+        <Grid container columnGap={2}>
+          <Grid item xs={12}>
+            <Typography color='primary' variant='overline' align='center'>
+              Phone
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} lg={9}>
-            <Typography variant='caption'>{user?.phone}</Typography>
+          <Grid item xs={12}>
+            <Typography variant='overline' gutterBottom>
+              {user?.phone}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography
+              color='primary'
+              variant='overline'
+              align='center'
+              gutterBottom
+            >
+              Address{' '}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant='caption'>{`${user?.address?.suite},${user?.address?.street}, ${user?.address?.city},(${user?.address?.zipcode}) `}</Typography>
           </Grid>
         </Grid>
       </CardContent>
