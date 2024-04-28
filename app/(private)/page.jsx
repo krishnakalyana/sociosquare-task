@@ -25,7 +25,7 @@ export default function Dashboard() {
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
             return (
               <Grid key={item} item xs={12} sm={6} md={4} lg={3}>
-                <Skeleton variant='rounded' width={'100%'} height={130} />
+                <Skeleton variant='rounded' width={'100%'} height={190} />
               </Grid>
             )
           })}
