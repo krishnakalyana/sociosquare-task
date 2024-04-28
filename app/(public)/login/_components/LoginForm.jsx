@@ -34,15 +34,7 @@ export default function LoginForm() {
             />
           </Grid>
           <Grid item xs={12}>
-            <Button
-              type='submit'
-              variant='contained'
-              color='primary'
-              fullWidth
-              onClick={() => {
-                router.push(pages.Dashboard)
-              }}
-            >
+            <Button type='submit' variant='contained' color='primary' fullWidth>
               Login
             </Button>
           </Grid>
