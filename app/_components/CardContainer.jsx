@@ -9,7 +9,7 @@ export default function CardContainer({ children }) {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '60%'
+        width: '100%'
       }}
     >
       {children}
