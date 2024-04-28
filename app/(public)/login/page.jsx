@@ -1,65 +1,29 @@
-'use client'
-import { Button, Divider, TextField, Typography } from '@mui/material'
-import { useForm } from 'react-hook-form'
-import { useRouter } from 'next/navigation'
-import CardContainer from '../_components/CardContainer'
-import styles from '../public.module.css'
-import { pages } from '@/utils/constants'
+import { Grid, Typography } from '@mui/material'
+import CardContainer from '../../_components/CardContainer'
+import LoginForm from './_components/LoginForm'
+import LoginPoster from './_components/Poster'
+
 export default function Login() {
-  const { register, handleSubmit } = useForm()
-  const router = useRouter()
-  const onSubmit = data => {
-    console.log(data)
-  }
   return (
     <CardContainer>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form__layout}>
-        <Typography align='center' variant='h5' color={'primary'}>
-          Welcome Back!
-        </Typography>
-        <TextField
-          size='small'
-          {...register('username')}
-          label='Username'
-          variant='outlined'
-          fullWidth
-        />
-        <TextField
-          size='small'
-          {...register('password')}
-          label='Password'
-          type='password'
-          variant='outlined'
-          fullWidth
-        />
-        <Button
-          type='submit'
-          variant='contained'
-          color='primary'
-          fullWidth
-          onClick={() => {
-            router.push(pages.Dashboard)
-          }}
-        >
-          Login
-        </Button>
-      </form>
-      <Divider flexItem>
-        <Typography align='center' variant='overline'>
-          OR
-        </Typography>
-      </Divider>
-      <Button
-        type='submit'
-        variant='outlined'
-        color='primary'
-        fullWidth
-        onClick={() => {
-          router.push(pages.REGISTER)
-        }}
-      >
-        Register
-      </Button>
+      <Grid container rowSpacing={2}>
+        <Grid item xs={12}>
+          <Typography
+            color='primary'
+            variant='overline'
+            align='center'
+            gutterBottom
+          >
+            Welcome back
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={6}>
+          <LoginForm />
+        </Grid>
+        <Grid item xs={0} sm={6} lg={6}>
+          <LoginPoster />
+        </Grid>
+      </Grid>
     </CardContainer>
   )
 }

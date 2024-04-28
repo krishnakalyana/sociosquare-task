@@ -1,73 +1,28 @@
-'use client'
-import { Button, Divider, TextField, Typography } from '@mui/material'
-import CardContainer from '../_components/CardContainer'
-import { pages } from '@/utils/constants'
-import { useForm } from 'react-hook-form'
-import { useRouter } from 'next/navigation'
-import styles from '../public.module.css'
+import { Grid, Typography } from '@mui/material'
+import CardContainer from '../../_components/CardContainer'
+import RegisterForm from './_components/RegisterForm'
+import RegisterPoster from './_components/Poster'
 export default function Register() {
-  const { register, handleSubmit } = useForm()
-  const router = useRouter()
-  const onSubmit = data => {
-    console.log(data)
-  }
   return (
     <CardContainer>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form__layout}>
-        <Typography align='center' variant='h5' color={'primary'}>
-          Lets get you started !
-        </Typography>
-
-        <TextField
-          size='small'
-          {...register('fullname')}
-          label='Full Name'
-          variant='outlined'
-          fullWidth
-        />
-        <TextField
-          size='small'
-          {...register('username')}
-          label='Username'
-          variant='outlined'
-          fullWidth
-        />
-        <TextField
-          size='small'
-          {...register('password')}
-          label='Password'
-          type='password'
-          variant='outlined'
-          fullWidth
-        />
-        <Button
-          type='submit'
-          variant='contained'
-          color='primary'
-          fullWidth
-          onClick={() => {
-            router.push(pages.Dashboard)
-          }}
-        >
-          Register
-        </Button>
-      </form>
-      <Divider flexItem>
-        <Typography align='center' variant='overline'>
-          OR
-        </Typography>
-      </Divider>
-      <Button
-        type='submit'
-        variant='outlined'
-        color='primary'
-        fullWidth
-        onClick={() => {
-          router.push(pages.LOGIN)
-        }}
-      >
-        Login
-      </Button>
+      <Grid container rowSpacing={2}>
+        <Grid item xs={12}>
+          <Typography
+            color='primary'
+            variant='overline'
+            align='center'
+            gutterBottom
+          >
+            Lets get you started
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={6}>
+          <RegisterForm />
+        </Grid>
+        <Grid item xs={0} sm={6} lg={6}>
+          <RegisterPoster />
+        </Grid>
+      </Grid>
     </CardContainer>
   )
 }
