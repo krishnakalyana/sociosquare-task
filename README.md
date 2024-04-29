@@ -5,7 +5,7 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Configuration](#configuration)
+- [Contact](#contact)
 
 ## Features
 
